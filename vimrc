@@ -218,7 +218,11 @@ let mapleader=","
 " itchyny/lightline.vim
 set laststatus=2
 " jpo/vim-railscasts-theme
-colorscheme railscasts
+try
+  colorscheme railscasts
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme desert
+endtry
 " xsunsmile/showmarks
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 " nathanaelkane/vim-indent-guides
