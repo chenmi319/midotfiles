@@ -1,13 +1,4 @@
 # midotfiles
-## vim
-* run in bash:
-```
-sudo apt-get update && sudo apt-get install silversearcher-ag vim-nox ctags wget
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/vimrc -O ~/.vimrc
-vim +PluginInstall +qall
-```
-
 
 ## git
 * run in bash:
@@ -15,6 +6,33 @@ vim +PluginInstall +qall
 sudo apt-get update && sudo apt-get install git
 wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/gitconfig -O ~/.gitconfig
 wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/gitignore -O ~/.gitignore
+```
+* you should create ~/.gitconfig.user like
+```
+[user]
+  email = aaa@bbb.com
+  name = ccc
+```
+
+## tmux
+* run in bash:
+```
+sudo apt-get update && sudo apt-get install tmux
+wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/tmux.conf -O ~/.tmux.conf
+```
+* for osx users, you should brew install/upgrade reattach-to-user-namespace first, and run in bah:
+```
+wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/tmux.conf.osx -O ~/.tmux.conf.osx
+```
+
+
+## vim
+* run in bash:
+```
+sudo apt-get update && sudo apt-get install silversearcher-ag vim-nox ctags wget
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/vimrc -O ~/.vimrc
+vim +PluginInstall +qall
 ```
 
 ## zprezto 
