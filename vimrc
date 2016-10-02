@@ -119,7 +119,9 @@ Bundle 'vim-scripts/lastpos.vim'
 Bundle 'vim-scripts/sudo.vim'
 Bundle 'goldfeld/ctrlr.vim'
 Bundle 'editorconfig/editorconfig-vim'
-Bundle 'vim-scripts/Tagbar'
+Bundle 'vim-scripts/tagbar'
+Bundle 'Shougo/vimshell.vim'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
