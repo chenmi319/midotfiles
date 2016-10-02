@@ -47,12 +47,11 @@ setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
-chsh -s /bin/zsh
 wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/prompt_chenmi_setup -O ~/.zprezto/modules/prompt/functions/prompt_chenmi_setup
 wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/zpreztorc -O ~/.zprezto/runcoms/zpreztorc
 wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/zshrc -O ~/.zprezto/runcoms/zshrc
 ```
-* relogin
+* run zsh and if everything works well, 'chsh -s /bin/zsh' or 'sudo vipw' to edit your default shell to /bin/zsh
 
 ## bash bashit(for develop)
 * run in bash:
