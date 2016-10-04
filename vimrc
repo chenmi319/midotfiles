@@ -527,4 +527,6 @@ nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
 nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
+" fix syntastic error
+let g:syntastic_scss_sass_args="--load-path .bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets"
 
