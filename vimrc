@@ -158,7 +158,7 @@ if has('persistent_undo')
   set undodir=~/.vim/backups
   set undofile
 endif
-set autoindent
+set noautoindent
 set smartindent
 set smarttab
 set shiftwidth=2
