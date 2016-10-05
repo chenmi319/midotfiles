@@ -272,12 +272,12 @@ endif
 " vim-scripts/AutoTag.git
 let g:autotagExcludeSuffixes="tml.xml.text.txt.vim"
 " vim-scripts/camelcasemotion.git
-map W <Plug>CamelCaseMotion_w
-map B <Plug>CamelCaseMotion_b
-map E <Plug>CamelCaseMotion_e
-sunmap W
-sunmap B
-sunmap E
+"map W <Plug>CamelCaseMotion_w
+"map B <Plug>CamelCaseMotion_b
+"map E <Plug>CamelCaseMotion_e
+"sunmap W
+"sunmap B
+"sunmap E
 " chrisbra/color_highlight.git
 let g:colorizer_auto_filetype='css,sass,less,html,htm,haml,erb'
 " ctrlpvim/ctrlp.vim

@@ -1,11 +1,24 @@
 # midotfiles
 
-## git
+## general
 * run in bash:
 ```
 sudo apt-get update && sudo apt-get install git
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/gitconfig -O ~/.gitconfig
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/gitignore -O ~/.gitignore
+git clone https://github.com/chenmi319/midotfiles.git ~/.midotfiles
+```
+* you should run register function tryLink before you use it:
+```
+tryLink(){
+  if [[ -a $2 ]]; then mv -f $2 $2.bak; fi
+  ln -s $1 $2
+}
+```
+
+## git
+* run in bash:
+```
+tryLink ~/.midotfiles/gitconfig ~/.gitconfig
+tryLink ~/.midotfiles/gitignore ~/.gitignore
 ```
 * you should create ~/.gitconfig.user like
 ```
@@ -17,28 +30,28 @@ wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/gitignore -O 
 ## tmux
 * run in bash:
 ```
-sudo apt-get update && sudo apt-get install tmux
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/tmux.conf -O ~/.tmux.conf
+sudo apt-get install tmux
+tryLink ~/.midotfiles/tmux.conf ~/.tmux.conf
 ```
 * for osx users, you should brew install/upgrade reattach-to-user-namespace first, and run in bah:
 ```
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/tmux.conf.osx -O ~/.tmux.conf.osx
+tryLink ~/.midotfiles/tmux.conf.osx ~/.tmux.conf.osx
 ```
 
 
 ## vim
 * run in bash:
 ```
-sudo apt-get update && sudo apt-get install silversearcher-ag vim-nox ctags
+sudo apt-get install silversearcher-ag vim-nox ctags
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/vimrc -O ~/.vimrc
+tryLink ~/.midotfiles/vimrc ~/.vimrc
 vim +PluginInstall +qall
 ```
 
 ## zprezto 
 * run in bash:
 ```
-sudo apt-get update && sudo apt-get install zsh
+sudo apt-get install zsh
 ```
 * run in zsh:
 ```
@@ -47,9 +60,9 @@ setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/prompt_chenmi_setup -O ~/.zprezto/modules/prompt/functions/prompt_chenmi_setup
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/zpreztorc -O ~/.zprezto/runcoms/zpreztorc
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/zshrc -O ~/.zprezto/runcoms/zshrc
+tryLink ~/.midotfiles/prompt_chenmi_setup ~/.zprezto/modules/prompt/functions/prompt_chenmi_setup
+tryLink ~/.midotfiles/zpreztorc ~/.zprezto/runcoms/zpreztorc
+tryLink ~/.midotfiles/zshrc ~/.zprezto/runcoms/zshrc
 ```
 * run zsh and if everything works well, 'chsh -s /bin/zsh' or 'sudo vipw' to edit your default shell to /bin/zsh
 
@@ -73,6 +86,6 @@ echo "\nexport VISUAL=vim\nexport EDITOR=\"\$VISUAL\"\n" >> ~/.bashrc
 ```
 git clone https://github.com/nojhan/liquidprompt.git ~/.liquidprompt
 echo '[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt' >> ~/.bashrc
-wget https://raw.githubusercontent.com/chenmi319/midotfiles/master/liquidpromptrc -O ~/.liquidpromptrc
+tryLink ~/.midotfiles/liquidpromptrc ~/.liquidpromptrc
 ```
 * relogin
