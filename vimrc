@@ -158,7 +158,7 @@ if has('persistent_undo')
   set undodir=~/.vim/backups
   set undofile
 endif
-set noautoindent
+set autoindent
 set smartindent
 set smarttab
 set shiftwidth=2
@@ -253,6 +253,7 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+autocmd FileType yaml setlocal noautoindent
 " jistr/vim-nerdtree-tabs.git
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_focus_on_files = 1
