@@ -168,7 +168,7 @@ set expandtab
 filetype plugin on
 filetype indent on
 set list listchars=tab:>-,trail:-
-set nowrap
+set wrap
 set linebreak
 set foldmethod=indent
 set foldnestmax=3
