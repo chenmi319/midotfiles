@@ -14,6 +14,8 @@
 #
 
 function prompt_skwp_precmd {
+  current_time=`date +"%D %T"`
+
   # Get Git repository information.
   if (( $+functions[git-info] )); then
     git-info
@@ -23,10 +25,14 @@ function prompt_skwp_precmd {
   if (( $+functions[ruby-info] )); then
     ruby-info
   fi
+
+  # Get node information
+  if (( $+functions[node-info] )); then
+    node-info
+  fi
 }
 
 function prompt_skwp_setup {
-  current_time=`date +"%D %T"`
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
   prompt_opts=(cr percent subst)
@@ -68,9 +74,12 @@ function prompt_skwp_setup {
   # Set ruby-info parameters.
   zstyle ':prezto:module:ruby:info:version' format '[%v]'
 
+  # node info (nvm)
+  zstyle ':prezto:module:node:info:version' format '[%v]'
+
   # Define prompts.
   PROMPT="${_prompt_skwp_colors[3]}%n%f@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"$ "
-  RPROMPT='%F{24}${ruby_info[version]}[$current_time]'
+  RPROMPT='%F{24}${node_info[version]}${ruby_info[version]}[$current_time]'
 
 }
 
