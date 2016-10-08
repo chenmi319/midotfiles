@@ -12,10 +12,15 @@ fi
 
 # Customize to your needs...
 #
+
 export EDITOR=vim
 export VISUAL="$EDITOR"
+
 [[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
+
 unsetopt auto_name_dirs
+
+alias aws-ssh='ssh -tt aws-office-jump ssh -tt '
 
 # lazynvm
 lazynvm() {
