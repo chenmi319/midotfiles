@@ -16,7 +16,8 @@ Plugin 'VundleVim/Vundle.vim'
 " appearance.vundle
 Bundle 'chrisbra/color_highlight.git'
 " Bundle 'skwp/vim-colors-solarized'
-Bundle 'jpo/vim-railscasts-theme'
+" Bundle 'jpo/vim-railscasts-theme'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'itchyny/lightline.vim'
 Bundle 'jby/tmux.vim.git'
 Bundle 'morhetz/gruvbox'
@@ -253,7 +254,7 @@ function! MyFilename()
 endfunction
 " jpo/vim-railscasts-theme
 try
-  colorscheme railscasts
+  colorscheme Tomorrow-Night-Bright
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme desert
 endtry
