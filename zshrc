@@ -35,8 +35,8 @@ load_nvm () {
   export NVM_LOADED=1
 }
 for cmd in "${NODE_GLOBALS[@]}"; do
-  if ! which ${cmd} &>/dev/null; then
+  #if ! which ${cmd} &>/dev/null; then
     eval "${cmd}() { unset -f ${cmd} &>/dev/null; [ -z \${NVM_LOADED+x} ] && load_nvm; ${cmd} \$@; }"
-  fi
+  #fi
 done
 
