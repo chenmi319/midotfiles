@@ -13,6 +13,7 @@ fi
 # Customize to your needs...
 #
 
+# edit default editor
 export EDITOR=vim
 export VISUAL="$EDITOR"
 
@@ -38,3 +39,7 @@ for cmd in "${NODE_GLOBALS[@]}"; do
   eval "${cmd}() { unset -f ${cmd} &>/dev/null; [ -z \${NVM_LOADED+x} ] && load_nvm; ${cmd} \$@; }"
 done
 
+# fix rvm not reload in ubuntu in tmux
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  cd .
+fi
