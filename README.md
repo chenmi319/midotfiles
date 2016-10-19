@@ -30,12 +30,13 @@ tryLink ~/.midotfiles/gitignore ~/.gitignore
 ## tmux
 * run in bash:
 ```
+sudo apt-get update
+sudo apt-get install python-software-properties software-properties-common
+sudo add-apt-repository ppa:pi-rho/dev
+sudo apt-get update
 sudo apt-get install tmux
 tryLink ~/.midotfiles/tmux.conf ~/.tmux.conf
-```
-* for osx users, you should brew install/upgrade reattach-to-user-namespace first, and run in bah:
-```
-tryLink ~/.midotfiles/tmux.conf.osx ~/.tmux.conf.osx
+tryLink ~/.midotfiles/tmux-osx.conf ~/.tmux-osx.conf
 ```
 
 
