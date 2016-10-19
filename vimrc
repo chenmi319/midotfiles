@@ -16,12 +16,11 @@ Plugin 'VundleVim/Vundle.vim'
 " appearance.vundle
 Bundle 'chrisbra/color_highlight.git'
 " Bundle 'skwp/vim-colors-solarized'
-" Bundle 'jpo/vim-railscasts-theme'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'flazz/vim-colorschemes'
 Bundle 'itchyny/lightline.vim'
 Bundle 'jby/tmux.vim.git'
 Bundle 'morhetz/gruvbox'
-Bundle 'xsunsmile/showmarks.git'
+" Bundle 'xsunsmile/showmarks.git'
 " Bundle 'chriskempson/base16-vim'
 " Required for Gblame in terminal vim
 Bundle 'godlygeek/csapprox.git'
@@ -252,14 +251,15 @@ function! MyFilename()
   return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
        \ ('' != expand('%') ? expand('%') : '[NoName]')
 endfunction
-" jpo/vim-railscasts-theme
+" flazz/vim-colorschemes
 try
-  colorscheme Tomorrow-Night-Bright
+  " colorscheme Tomorrow-Night-Bright
+  colorscheme railscasts
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme desert
 endtry
 " xsunsmile/showmarks
-let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
+" let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 " nathanaelkane/vim-indent-guides
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
@@ -289,6 +289,13 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType yaml setlocal noautoindent
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" Close popup by <Space>.
+inoremap <expr><Space> pumvisible() ? neocomplete#smart_close_popup()."" : "\<Space>"
 " jistr/vim-nerdtree-tabs.git
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_focus_on_files = 1
