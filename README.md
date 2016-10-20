@@ -31,10 +31,10 @@ tryLink ~/.midotfiles/gitignore ~/.gitignore
 * run in bash:
 ```
 sudo apt-get update
-sudo apt-get install python-software-properties software-properties-common
-sudo add-apt-repository ppa:pi-rho/dev
+sudo apt-get -y install python-software-properties software-properties-common
+sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
-sudo apt-get install tmux
+sudo apt-get install -y tmux
 tryLink ~/.midotfiles/tmux.conf ~/.tmux.conf
 tryLink ~/.midotfiles/tmux-osx.conf ~/.tmux-osx.conf
 ```
