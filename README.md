@@ -48,6 +48,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 tryLink ~/.midotfiles/vimrc ~/.vimrc
 vim +PluginInstall +qall
 ```
+* for syntastic check: js can `npm install -g jshint`, yml can `gem install haml`, and etc.
 
 ## zprezto 
 * run in bash:

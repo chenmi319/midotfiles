@@ -15,19 +15,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 " appearance.vundle
 Bundle 'chrisbra/color_highlight.git'
-" Bundle 'skwp/vim-colors-solarized'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'itchyny/lightline.vim'
-"Bundle 'jby/tmux.vim.git'
-Bundle 'morhetz/gruvbox'
-" Bundle 'xsunsmile/showmarks.git'
-" Bundle 'chriskempson/base16-vim'
 " Required for Gblame in terminal vim
 Bundle 'godlygeek/csapprox.git'
 
 " git.vundle
 Bundle 'gregsexton/gitv'
-" Bundle 'mattn/gist-vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'airblade/vim-gitgutter'
@@ -39,10 +33,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate.git'
 Bundle 'mattn/emmet-vim'
 Bundle 'honza/vim-snippets'
-Bundle 'jtratner/vim-flavored-markdown.git'
 Bundle 'scrooloose/syntastic.git'
-Bundle 'nelstrom/vim-markdown-preview'
-" Bundle 'skwp/vim-html-escape'
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
 
@@ -51,19 +42,14 @@ Bundle 'jistr/vim-nerdtree-tabs.git'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'xolox/vim-misc'
-" Bundle 'xolox/vim-session'
 
 " ruby.vundle
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-rake.git'
-Bundle 'tpope/vim-rvm.git'
 Bundle 'vim-ruby/vim-ruby.git'
 Bundle 'keith/rspec.vim'
-" Bundle 'skwp/vim-iterm-rspec'
-" Bundle 'skwp/vim-spec-finder'
 Bundle 'ck3g/vim-change-hash-syntax'
-Bundle 'tpope/vim-bundler'
 
 " search.vundle
 Bundle 'justinmk/vim-sneak'
@@ -97,14 +83,9 @@ Bundle 'Shougo/neocomplete.git'
 Bundle 'briandoll/change-inside-surroundings.vim.git'
 Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim.git'
-Bundle 'vim-scripts/camelcasemotion.git'
 Bundle 'vim-scripts/matchit.zip.git'
 Bundle 'kristijanhusak/vim-multiple-cursors'
-" Bundle 'Keithbsmiley/investigate.vim'
-" Bundle 'chrisbra/NrrwRgn'
 Bundle 'christoomey/vim-tmux-navigator'
-" Bundle 'bogado/file-line.git' conflict with show invisable chars
-" Bundle 'mattn/webapi-vim.git'
 Bundle 'sjl/gundo.vim'
 Bundle 'skwp/YankRing.vim'
 Bundle 'tpope/vim-abolish'
@@ -253,13 +234,10 @@ function! MyFilename()
 endfunction
 " flazz/vim-colorschemes
 try
-  " colorscheme Tomorrow-Night-Bright
   colorscheme railscasts
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme desert
 endtry
-" xsunsmile/showmarks
-" let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 " nathanaelkane/vim-indent-guides
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
@@ -289,13 +267,9 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 autocmd FileType yaml setlocal noautoindent
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? neocomplete#smart_close_popup()."" : "\<Space>"
 " jistr/vim-nerdtree-tabs.git
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_focus_on_files = 1
@@ -313,13 +287,6 @@ else
 endif
 " vim-scripts/AutoTag.git
 let g:autotagExcludeSuffixes="tml.xml.text.txt.vim"
-" vim-scripts/camelcasemotion.git
-"map W <Plug>CamelCaseMotion_w
-"map B <Plug>CamelCaseMotion_b
-"map E <Plug>CamelCaseMotion_e
-"sunmap W
-"sunmap B
-"sunmap E
 " chrisbra/color_highlight.git
 let g:colorizer_auto_filetype='css,sass,less,html,htm,haml,erb'
 " ctrlpvim/ctrlp.vim
@@ -370,21 +337,20 @@ let g:surround_35  = "#{\r}"   " #
 let g:surround_45 = "<% \r %>"    " -
 let g:surround_61 = "<%= \r %>"   " =
 " scrooloose/syntastic.git
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
-" let g:syntastic_quiet_messages = {'level': 'warnings'}
-let g:syntastic_javascript_checkers = ['eslint']
-function! s:FindRubyExec()
-    if executable("rvm")
-        return system("rvm tools identifier")
-    endif
-
-    return "ruby"
-endfunction
-if !exists("g:syntastic_ruby_exec")
-    let g:syntastic_ruby_exec = s:FindRubyExec()
-endif
+let g:syntastic_javascript_checkers = ['jshint']
+"tmp fix syntastic for bootstrap
+let g:syntastic_scss_sass_args="--load-path .bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets"
 " tomtom/tcomment_vim.git
 nmap <silent> gcp <c-_>p
 let g:tcommentTextObjectInlineComment = ''
@@ -535,8 +501,6 @@ nnoremap <C-Up> <C-w>+
 nnoremap <C-Down> <C-w>-
 nnoremap <C-Left> <C-w><
 nnoremap <C-Right>  <C-w>>
-" tmp fix syntastic for bootstrap
-let g:syntastic_scss_sass_args="--load-path .bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets"
 " show invisable chars
 highlight nonascii guibg=Red ctermbg=2
 autocmd BufReadPost * syntax match nonascii "[^\u0000-\u007F]"
