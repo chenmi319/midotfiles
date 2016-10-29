@@ -46,7 +46,7 @@ zstyle ':prezto:load' pmodule \
 
 # Set the query found color.
 zstyle ':prezto:module:autosuggestions' color 'yes'
-zstyle ':prezto:module:autosuggestions:color' found 'fg=240'
+# zstyle ':prezto:module:autosuggestions:color' found 'fg=240'
 
 #
 # Editor
@@ -56,7 +56,7 @@ zstyle ':prezto:module:autosuggestions:color' found 'fg=240'
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 #
 # Git
