@@ -91,3 +91,9 @@ echo '[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt' >> ~/.bashrc
 tryLink ~/.midotfiles/liquidpromptrc ~/.liquidpromptrc
 ```
 * relogin
+
+## solarized dark
+* run in bash
+```
+tryLink ~/.midotfiles/dircolors.256dark ~/.dir_colors
+```
