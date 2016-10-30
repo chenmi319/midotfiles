@@ -81,7 +81,7 @@ Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Shougo/neocomplete.git'
 Bundle 'briandoll/change-inside-surroundings.vim.git'
-Bundle 'godlygeek/tabular'
+Bundle 'junegunn/vim-easy-align'
 Bundle 'tomtom/tcomment_vim.git'
 Bundle 'vim-scripts/matchit.zip.git'
 Bundle 'kristijanhusak/vim-multiple-cursors'
@@ -379,10 +379,13 @@ function! Multiple_cursors_after()
     exe 'NeoCompleteUnlock'
   endif
 endfunction
-" godlygeek/tabular
-map <silent> <leader>aa :Tabularize /
-map <silent> <leader>a= :Tabularize /=<CR>
-map <silent> <leader>a: :Tabularize /:\zs<CR>
+" junegunn/vim-easy-align
+vmap <Leader>a <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+if !exists('g:easy_align_delimiters')
+  let g:easy_align_delimiters = {}
+endif
+let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String'] }
 " AndrewRadev/splitjoin.vim
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
