@@ -349,8 +349,6 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_javascript_checkers = ['jshint']
-"tmp fix syntastic for bootstrap
-let g:syntastic_scss_sass_args="--load-path .bundle/ruby/2.3.0/gems/bootstrap-sass-3.3.6/assets/stylesheets"
 " tomtom/tcomment_vim.git
 nmap <silent> gcp <c-_>p
 let g:tcommentTextObjectInlineComment = ''
