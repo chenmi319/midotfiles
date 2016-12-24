@@ -42,5 +42,7 @@ alias aws-ssh='ssh -tt aws-office-jump ssh -tt '
 
 # fix rvm not reload in ubuntu in tmux
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-  cd .
+  if [ "$(uname)" != "Darwin" ]; then
+    cd .
+  fi
 fi
