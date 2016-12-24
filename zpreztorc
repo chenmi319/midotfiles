@@ -34,12 +34,12 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'command-not-found' \
   'git' \
-  'node' \
   'ruby' \
   'syntax-highlighting' \
   'history-substring-search' \
   'autosuggestions' \
   'prompt'
+#  'node' \
 
 #
 # Autosuggestions
