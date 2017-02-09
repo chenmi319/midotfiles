@@ -349,6 +349,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_auto_loc_list=1
 let g:syntastic_javascript_checkers = ['jshint']
+" Bundle 'mxw/vim-jsx'
+let g:jsx_ext_required = 0
+"let g:jsx_pragma_required = 1
 " tomtom/tcomment_vim.git
 nmap <silent> gcp <c-_>p
 let g:tcommentTextObjectInlineComment = ''
