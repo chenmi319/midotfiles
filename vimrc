@@ -119,6 +119,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " basic config
+set t_Co=256
 set number
 set backspace=indent,eol,start
 set history=1000
