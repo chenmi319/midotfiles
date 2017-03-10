@@ -291,6 +291,7 @@ let g:autotagExcludeSuffixes="tml.xml.text.txt.vim"
 " chrisbra/color_highlight.git
 let g:colorizer_auto_filetype='css,sass,less,html,htm,haml,erb'
 " ctrlpvim/ctrlp.vim
+let g:ctrlp_working_path_mode = 0
 if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
