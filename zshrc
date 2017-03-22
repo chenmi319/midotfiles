@@ -20,6 +20,11 @@ export LESS="-F -g -i -M -R -w -X -z-4"
 
 [[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
 
+fixssh() {
+  eval $(tmux show-env    \
+    |sed -n 's/^\(SSH_[^=]*\)=\(.*\)/export \1="\2"/p')
+}
+
 unsetopt auto_name_dirs
 
 alias aws-ssh='ssh -tt aws-office-jump ssh -tt '
