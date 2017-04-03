@@ -41,6 +41,16 @@ tryLink ~/.midotfiles/tmux-osx.conf ~/.tmux-osx.conf
 
 
 ## vim
+* install vim 8.0+
+```
+sudo apt install software-properties-common
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim
+########## 删除
+sudo apt remove vim
+sudo add-apt-repository --remove ppa:jonathonf/vim
+```
 * run in bash:
 ```
 sudo apt-get install silversearcher-ag vim-nox ctags
