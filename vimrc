@@ -100,7 +100,7 @@ Bundle 'vim-scripts/AutoTag.git'
 Bundle 'vim-scripts/lastpos.vim'
 Bundle 'vim-scripts/sudo.vim'
 Bundle 'goldfeld/ctrlr.vim'
-Bundle 'editorconfig/editorconfig-vim'
+"Bundle 'editorconfig/editorconfig-vim'
 Bundle 'vim-scripts/tagbar'
 Bundle 'Shougo/vimshell.vim'
 
