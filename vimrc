@@ -186,7 +186,7 @@ set mouse=nv
 set completeopt=menu,menuone,preview
 set pastetoggle=<F7>
 set tags=./tags;~/tags
-map <F10> :!ctags -R --fields=+l --extra=+q .<CR>
+map <F10> :!ctags -R --exclude=jujube --exclude=vendor/cache --fields=+l --extra=+q .<CR>
 let g:used_javascript_libs = 'jquery'
 set grepprg=git\ grep
 let g:grep_cmd_opts = '--line-number'
