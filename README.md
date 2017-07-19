@@ -35,6 +35,7 @@ sudo apt-get -y install python-software-properties software-properties-common
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install -y tmux
+osx should install tmux reattach-to-user-namespace
 tryLink ~/.midotfiles/tmux.conf ~/.tmux.conf
 tryLink ~/.midotfiles/tmux-osx.conf ~/.tmux-osx.conf
 ```
