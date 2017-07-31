@@ -54,3 +54,7 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
     cd .
   fi
 fi
+
+export GOROOT=$HOME/go
+export GOPATH=$HOME/.gopath
+export PATH=$PATH:$GOROOT/bin
