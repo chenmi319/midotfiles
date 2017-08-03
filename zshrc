@@ -54,3 +54,6 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
     cd .
   fi
 fi
+
+# https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
+alias dict="$HOME/bin/Command-Line-Youdao-Dictionary/dict"
