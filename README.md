@@ -15,6 +15,12 @@ tryLink(){
 ```
 
 ## git
+* ubuntu upgrade git
+```
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt-get update
+sudo apt-get install git -y
+```
 * run in bash:
 ```
 tryLink ~/.midotfiles/gitconfig ~/.gitconfig
