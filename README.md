@@ -63,7 +63,7 @@ sudo apt install vim
 sudo apt-get install silversearcher-ag vim-nox ctags
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 tryLink ~/.midotfiles/vimrc ~/.vimrc
-vim +PluginInstall +qall # run `vim +PluginUpdate` +qall for update
+vim +PluginInstall +qall # run `vim +PluginUpdate +qall` for update
 ```
 * for syntastic check: js can `npm install -g jshint`, yml can `gem install haml`, and etc.
 
