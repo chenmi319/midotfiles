@@ -41,7 +41,7 @@ sudo apt-get -y install python-software-properties software-properties-common
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
 sudo apt-get install -y tmux
-osx should install tmux reattach-to-user-namespace
+osx should brew install tmux reattach-to-user-namespace
 tryLink ~/.midotfiles/tmux.conf ~/.tmux.conf
 tryLink ~/.midotfiles/tmux-osx.conf ~/.tmux-osx.conf
 ```
@@ -54,16 +54,16 @@ sudo apt install software-properties-common
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt install vim
-########## 删除
-sudo apt remove vim
-sudo add-apt-repository --remove ppa:jonathonf/vim
+########## 如果哪天需要干净删除这个版本的 vim
+#sudo apt remove vim
+#sudo add-apt-repository --remove ppa:jonathonf/vim
 ```
 * run in bash:
 ```
 sudo apt-get install silversearcher-ag vim-nox ctags
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 tryLink ~/.midotfiles/vimrc ~/.vimrc
-vim +PluginInstall +qall
+vim +PluginInstall +qall # run `vim +PluginUpdate` +qall for update
 ```
 * for syntastic check: js can `npm install -g jshint`, yml can `gem install haml`, and etc.
 
