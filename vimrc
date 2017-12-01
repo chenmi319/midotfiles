@@ -292,7 +292,7 @@ let g:autotagExcludeSuffixes="tml.xml.text.txt.vim"
 " chrisbra/color_highlight.git
 let g:colorizer_auto_filetype='css,sass,less,html,htm,haml,erb'
 " ctrlpvim/ctrlp.vim
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'ra'
 if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
@@ -306,9 +306,9 @@ else
 endif
 let g:ctrlp_by_filename = 1
 let g:ctrlp_switch_buffer = 0
-" let g:ctrlp_map = '<leader>ff'
-" nnoremap <silent> <leader>ff :CtrlP<CR>
-nnoremap <silent> <leader>ff :CtrlPMixed<CR>
+let g:ctrlp_map = '<leader>ff'
+nnoremap <silent> <leader>ff :CtrlP<CR>
+" nnoremap <silent> <leader>ff :CtrlPMixed<CR>
 nnoremap <silent> <leader>fb :CtrlPBuffer<cr>
 nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
 map <leader>ja :CtrlP app/assets<CR>
