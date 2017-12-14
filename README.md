@@ -83,7 +83,8 @@ tryLink ~/.midotfiles/prompt_chenmi_setup ~/.zprezto/modules/prompt/functions/pr
 tryLink ~/.midotfiles/zpreztorc ~/.zprezto/runcoms/zpreztorc
 tryLink ~/.midotfiles/zshrc ~/.zprezto/runcoms/zshrc
 ```
-* run zsh and if everything works well, 'chsh -s /bin/zsh' or 'sudo vipw' to edit your default shell to /bin/zsh
+* on linux, zsh-autosuggestions may not be compatible, you may need run: cd ~/.zprezto/modules/autosuggestions/external && git fetch && git co v0.4.0
+* run zsh and type several commands, if everything works well, 'chsh -s /bin/zsh' or 'sudo vipw' to edit your default shell to /bin/zsh
 
 ## bash bashit(for develop)
 * run in bash:
