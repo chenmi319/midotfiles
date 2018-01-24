@@ -307,8 +307,8 @@ endif
 let g:ctrlp_by_filename = 1
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_map = '<leader>ff'
-nnoremap <silent> <leader>ff :CtrlP<CR>
-" nnoremap <silent> <leader>ff :CtrlPMixed<CR>
+" nnoremap <silent> <leader>ff :CtrlP<CR>
+nnoremap <silent> <leader>ff :CtrlPMixed<CR>
 nnoremap <silent> <leader>fb :CtrlPBuffer<cr>
 nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
 map <leader>ja :CtrlP app/assets<CR>
