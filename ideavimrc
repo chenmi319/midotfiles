@@ -1,2 +1,11 @@
+" run in iterm first: defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+set history=1000
+set showcmd
+set showmode
+set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 set clipboard+=unnamed
+
+nmap <silent> // :nohlsearch<CR>
