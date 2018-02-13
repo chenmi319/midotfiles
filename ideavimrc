@@ -14,5 +14,5 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
-nnoremap <silent> H gT<CR>
-nnoremap <silent> L gt<CR>
+nnoremap <a-h> gT
+nnoremap <a-l> gt

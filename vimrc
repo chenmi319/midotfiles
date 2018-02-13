@@ -473,6 +473,8 @@ nnoremap ` '
 nnoremap <C-t>c :tabnew<CR>
 nnoremap <silent> H :tabprevious<CR>
 nnoremap <silent> L :tabnext<CR>
+nnoremap ˙ gT
+nnoremap ¬ gt
 let g:lasttab = 1
 nnoremap <silent> T :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
