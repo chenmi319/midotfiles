@@ -115,3 +115,10 @@ tryLink ~/.midotfiles/liquidpromptrc ~/.liquidpromptrc
 ```
 tryLink ~/.midotfiles/dircolors.256dark ~/.dir_colors
 ```
+
+## ideavimrc
+```
+tryLink ~/.midotfiles/ideavimrc ~/.ideavimrc
+```
+then restart IntellijIDEA
+
