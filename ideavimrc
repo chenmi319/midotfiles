@@ -9,11 +9,63 @@ set smartcase
 set scrolloff=8
 set clipboard+=unnamed
 
-nmap <silent> // :nohlsearch<CR>
-
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
 nnoremap <a-h> gT
 nnoremap <a-l> gt
+
+" options
+nnoremap cow :action EditorToggleUseSoftWraps<cr>
+nnoremap col :action EditorToggleShowWhitespaces<cr>
+
+let mapleader=","
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+" actions
+nnoremap <leader>q :action CloseContent<cr>
+nnoremap <leader>Q :action ReopenClosedTab<cr>
+nnoremap <leader>e :action SearchEverywhere<cr>
+nnoremap <leader>E :action Switcher<cr>
+nnoremap <leader>t :action FileStructurePopup<cr>
+nnoremap <leader>T :action GotoSymbol<cr>
+nnoremap <leader>a :action GotoAction<cr>
+nnoremap <leader>b :action ToggleLineBreakpoint<cr>
+
+" code navigation
+nnoremap <leader>] :action GotoImplementation<cr>
+nnoremap <leader>[ :action GotoSuperMethod<cr>
+nnoremap <leader>u :action FindUsages<cr>
+nnoremap <leader>gt :action GotoTest<cr>
+nnoremap <leader>k :action HighlightUsagesInFile<cr>
+nnoremap \r :action RunClass<cr>
+nnoremap \R :action Run<cr>
+nnoremap \d :action DebugClass<cr>
+nnoremap \D :action Debug<cr>
+nnoremap \c :action CheckStyleCurrentFileAction<cr>
+
+" code refactoring
+nnoremap <leader>rr :action RenameElement<cr>
+
+" unimpaired mappings
+nnoremap [<leader> O<esc>j
+nnoremap ]<leader> o<esc>k
+nnoremap [q :action PreviousOccurence<cr>
+nnoremap ]q :action NextOccurence<cr>
+nnoremap [m :action MethodUp<cr>
+nnoremap ]m :action MethodDown<cr>
+nnoremap [c :action VcsShowPrevChangeMarker<cr>
+nnoremap ]c :action VcsShowNextChangeMarker<cr>
+
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+" but preserve ideavim defaults
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+" built in search looks better
+nnoremap / :action Find<cr>
+" but preserve ideavim search
+nnoremap g/ /
