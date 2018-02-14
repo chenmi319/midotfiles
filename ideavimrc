@@ -1,12 +1,13 @@
 " https://github.com/saaguero/ideavimrc/blob/master/.ideavimrc
 " run in iterm first: defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
-set history=1000
-set showcmd
-set showmode
 set hlsearch
+set scrolloff=8
 set ignorecase
 set smartcase
-set scrolloff=8
+set showcmd
+set showmode
+set history=1000
+
 set clipboard+=unnamed
 
 nnoremap <c-l> <c-w>l
@@ -15,30 +16,33 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
 nnoremap <a-h> gT
 nnoremap <a-l> gt
+nnoremap <c-s-tab> gT
+nnoremap <c-tab> gt
+
+" clear the search buffer when hitting return
+nnoremap <space><cr> :nohlsearch<cr>
 
 " options
 nnoremap cow :action EditorToggleUseSoftWraps<cr>
 nnoremap col :action EditorToggleShowWhitespaces<cr>
 
-let mapleader=","
-nmap <silent> <leader>/ :nohlsearch<CR>
-
 " actions
-nnoremap <leader>q :action CloseContent<cr>
-nnoremap <leader>Q :action ReopenClosedTab<cr>
-nnoremap <leader>e :action SearchEverywhere<cr>
-nnoremap <leader>E :action Switcher<cr>
-nnoremap <leader>t :action FileStructurePopup<cr>
-nnoremap <leader>T :action GotoSymbol<cr>
-nnoremap <leader>a :action GotoAction<cr>
-nnoremap <leader>b :action ToggleLineBreakpoint<cr>
+nnoremap <space>q :action CloseContent<cr>
+nnoremap <space>Q :action ReopenClosedTab<cr>
+nnoremap <space>\ :action VimFilePrevious<cr>
+nnoremap <space>e :action SearchEverywhere<cr>
+nnoremap <space>E :action Switcher<cr>
+nnoremap <space>t :action FileStructurePopup<cr>
+nnoremap <space>T :action GotoSymbol<cr>
+nnoremap <space>a :action GotoAction<cr>
+nnoremap <space>b :action ToggleLineBreakpoint<cr>
 
 " code navigation
-nnoremap <leader>] :action GotoImplementation<cr>
-nnoremap <leader>[ :action GotoSuperMethod<cr>
-nnoremap <leader>u :action FindUsages<cr>
-nnoremap <leader>gt :action GotoTest<cr>
-nnoremap <leader>k :action HighlightUsagesInFile<cr>
+nnoremap <space>] :action GotoImplementation<cr>
+nnoremap <space>[ :action GotoSuperMethod<cr>
+nnoremap <space>u :action FindUsages<cr>
+nnoremap <space>gt :action GotoTest<cr>
+nnoremap <space>k :action HighlightUsagesInFile<cr>
 nnoremap \r :action RunClass<cr>
 nnoremap \R :action Run<cr>
 nnoremap \d :action DebugClass<cr>
@@ -46,17 +50,18 @@ nnoremap \D :action Debug<cr>
 nnoremap \c :action CheckStyleCurrentFileAction<cr>
 
 " code refactoring
-nnoremap <leader>rr :action RenameElement<cr>
+nnoremap <space>rr :action RenameElement<cr>
 
 " unimpaired mappings
-nnoremap [<leader> O<esc>j
-nnoremap ]<leader> o<esc>k
+nnoremap [<space> O<esc>j
+nnoremap ]<space> o<esc>k
 nnoremap [q :action PreviousOccurence<cr>
 nnoremap ]q :action NextOccurence<cr>
 nnoremap [m :action MethodUp<cr>
 nnoremap ]m :action MethodDown<cr>
 nnoremap [c :action VcsShowPrevChangeMarker<cr>
 nnoremap ]c :action VcsShowNextChangeMarker<cr>
+
 
 " built-in navigation to navigated items works better
 nnoremap <c-o> :action Back<cr>
