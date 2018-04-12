@@ -16,7 +16,7 @@ fi
 # edit default editor
 export EDITOR=vim
 export VISUAL="$EDITOR"
-export LESS="-F -g -i -M -R -w -X -z-4"
+export LESS="-g -i -M -R -w -z-4"
 
 [[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
 
@@ -57,3 +57,8 @@ fi
 
 # https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
 alias dict="$HOME/bin/Command-Line-Youdao-Dictionary/dict"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
+export PATH=$PATH:$JAVA_HOME/bin/
+export CLASS_PATH=$PATH:$JAVA_HOME/lib/
+
+eval $(thefuck --alias)
