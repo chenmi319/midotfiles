@@ -47,6 +47,8 @@ alias aws-ssh='ssh -tt aws-office-jump ssh -tt '
 if [[ -a ".nvmrc" ]]; then
   nvm use `cat .nvmrc`
 fi
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+
 
 # fix rvm not reload in ubuntu in tmux
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
