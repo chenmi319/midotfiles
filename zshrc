@@ -16,7 +16,7 @@ fi
 # edit default editor
 export EDITOR=vim
 export VISUAL="$EDITOR"
-export LESS="-g -i -M -R -w -z-4"
+export LESS="-F -g -i -M -R -w -X -z-4"
 
 [[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
 
