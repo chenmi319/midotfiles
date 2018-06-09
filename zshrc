@@ -62,5 +62,3 @@ alias dict="$HOME/bin/Command-Line-Youdao-Dictionary/dict"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
 export PATH=$PATH:$JAVA_HOME/bin/
 export CLASS_PATH=$PATH:$JAVA_HOME/lib/
-
-eval $(thefuck --alias)
