@@ -61,4 +61,6 @@ fi
 alias dict="$HOME/bin/Command-Line-Youdao-Dictionary/dict"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+if jenv >/dev/null 2>&1; then
+  eval "$(jenv init -)"
+fi
