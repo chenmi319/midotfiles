@@ -64,3 +64,6 @@ export PATH="$HOME/.jenv/bin:$PATH"
 if jenv >/dev/null 2>&1; then
   eval "$(jenv init -)"
 fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
