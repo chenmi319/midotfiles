@@ -97,7 +97,8 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 bash-it enable completion bundler capistrano rake ssh tmux
 bash-it enable plugin git git-subrepo history nginx rails ruby rvm ssh tmux
 bash-it enable alias git rails tmux vim
-echo "\nexport VISUAL=vim\nexport EDITOR=\"\$VISUAL\"\n" >> ~/.bashrc
+echo "export VISUAL=vim" >> ~/.bashrc
+echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
 ```
 * relogin
 
