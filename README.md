@@ -123,3 +123,14 @@ tryLink ~/.midotfiles/ideavimrc ~/.ideavimrc
 ```
 then restart IntellijIDEA
 
+## [fasd install](https://github.com/clvv/fasd/wiki/Installing-via-Package-Managers)
+debian & ubuntu
+```bash
+sudo add-apt-repository ppa:aacebedo/fasd
+sudo apt-get update
+sudo apt-get install fasd
+```
+osx
+```bash
+brew install fasd
+```
