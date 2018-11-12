@@ -358,7 +358,7 @@ let g:jsx_ext_required = 0
 "let g:jsx_pragma_required = 1
 " tomtom/tcomment_vim.git
 nmap <silent> gcp <c-_>p
-let g:tcommentTextObjectInlineComment = ''
+let g:tcomment_textobject_inlinecomment = ''
 " vim-scripts/Tagbar
 nnoremap <silent> <leader>tt :TagbarToggle<CR>
 " tpope/vim-fugitive
