@@ -74,3 +74,5 @@ nnoremap g<c-i> <c-i>
 nnoremap / :action Find<cr>
 " but preserve ideavim search
 nnoremap g/ /
+" built in save will trigger plugin Save Actions
+nnoremap <space>w :action SaveAll<cr>
