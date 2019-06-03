@@ -78,3 +78,12 @@ alias sd='fasd -sid'     # interactive directory selection
 alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
+
+unalias gdk
+export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/opt/node@8/bin:$PATH"
+
+alias mysql57='docker run -it --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
+alias mysql57import='docker run -i --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
+alias rm='trash'
+
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"

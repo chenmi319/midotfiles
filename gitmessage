@@ -1,0 +1,26 @@
+
+# head: <type>(<scope>): <subject>
+# - type: feat, build, ci, docs, perf, refactor, style, test, revert, merge. MUST be one of them, lower case English.
+#   - feat: build a new feature
+#   - fix: fix a bug
+#   - refactor: refactory code
+#   - build: Changes that affect the build system or external dependencies (example scopes: gradle, deps)
+#   - test: add/fix unit test
+#   - perf: code change for enhancing performance
+#   - revert: revert some commits
+#   - merge: merge another branch. not recommand to merge another branch.
+#   - ci: Changes to our CI configuration files and scripts (example scopes: helm, gitlab)
+#   - docs: add readme or something like this.
+#   - style: code style
+# - scope: business/configration/entity name, can be empty (eg. if the change is a global or difficult to assign to a single component). CAN be Chinese.
+# - subject: MUST start with lowercase and persent tense verb (such as 'change'), 100-character line. MUST NOT use dot(.) at the end. CAN be Chinese.
+#
+# body: [OPTIONAL] 72-character wrapped. start with imperative, present tense verb, CAN be Chinese. This should answer:
+# * Why was this change necessary?
+# * How does it address the problem?
+# * Are there any side effects?
+#
+# footer: [OPTIONAL]
+# - Contain any information about Breaking Changes and also the place to reference GitHub/Gitlab issues that this commit Closes.
+# - BREAKING CHANGE
+# - Closes issues: #issueId
