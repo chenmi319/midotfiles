@@ -18,8 +18,6 @@ export EDITOR=vim
 export VISUAL="$EDITOR"
 export LESS="-F -g -i -M -R -w -X -z-4"
 
-[[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
-
 fixssh() {
   eval $(tmux show-env    \
     |sed -n 's/^\(SSH_[^=]*\)=\(.*\)/export \1="\2"/p')
@@ -49,13 +47,6 @@ if [[ -a ".nvmrc" ]]; then
 fi
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
-
-# fix rvm not reload in ubuntu in tmux
-if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-  if [ "$(uname)" != "Darwin" ]; then
-    cd .
-  fi
-fi
 
 # https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
 alias dict="$HOME/bin/Command-Line-Youdao-Dictionary/dict"
@@ -88,4 +79,17 @@ alias rm='trash'
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+[[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$HOME/.rvm/bin:$PATH"
+# fix Warning! PATH is not properly set up, $HOME/.rvm/gems/ruby-x.x.x/bin is not at first place.
 export PATH="$GEM_HOME/bin:$PATH"
+
+# fix rvm not reload in ubuntu in tmux
+if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+  if [ "$(uname)" != "Darwin" ]; then
+    cd .
+  fi
+fi
+
