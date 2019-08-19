@@ -71,7 +71,7 @@ nnoremap g<c-o> <c-o>
 nnoremap g<c-i> <c-i>
 
 " built in search looks better
-nnoremap / :action Find<cr>
+"nnoremap / :action Find<cr>
 " but preserve ideavim search
 nnoremap g/ /
 " built in save will trigger plugin Save Actions
