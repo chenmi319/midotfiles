@@ -93,3 +93,5 @@ if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
   fi
 fi
 
+# fix failing bck-i-search
+bindkey '^R' history-incremental-search-backward
