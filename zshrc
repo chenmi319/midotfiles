@@ -47,7 +47,6 @@ if [[ -a ".nvmrc" ]]; then
 fi
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
-
 # https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
 alias dict="$HOME/bin/Command-Line-Youdao-Dictionary/dict"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/
@@ -82,7 +81,7 @@ alias rm='trash'
 [[ -s "/etc/profile.d/rvm.sh" ]] && . "/etc/profile.d/rvm.sh" # Load RVM function
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$HOME/.rvm/bin:$PATH"
+#export PATH="$HOME/.rvm/bin:$PATH"
 # fix Warning! PATH is not properly set up, $HOME/.rvm/gems/ruby-x.x.x/bin is not at first place.
 export PATH="$GEM_HOME/bin:$PATH"
 
@@ -95,3 +94,10 @@ fi
 
 # fix failing bck-i-search
 bindkey '^R' history-incremental-search-backward
+
+alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
+alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
