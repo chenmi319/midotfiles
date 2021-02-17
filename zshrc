@@ -11,7 +11,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-#
+
+# HomeBrew
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+# HomeBrew END
 
 # edit default editor
 export EDITOR=vim
