@@ -408,6 +408,8 @@ nnoremap C-y :YRShow<CR>
 nnoremap <silent> <leader>tg :GitGutterLineHighlightsToggle<CR>
 let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
+" garbas/vim-snipmate.git
+let g:snipMate = { 'snippet_version' : 1 }
 " customize configs
 vnoremap <leader>p "0p
 vnoremap <leader>P "0P
