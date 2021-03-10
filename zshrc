@@ -47,9 +47,19 @@ alias aws-ssh='ssh -tt aws-office-jump ssh -tt '
 #for cmd in "${NODE_GLOBALS[@]}"; do
 #  eval "${cmd}() { unset -f ${cmd} &>/dev/null; [ -z \${NVM_LOADED+x} ] && load_nvm; ${cmd} \$@; }"
 #done
-if [[ -a ".nvmrc" ]]; then
-  nvm use `cat .nvmrc`
-fi
+function loadNvmrc()
+{
+  if [[ -a ".nvmrc" ]]; then
+    nvm use `cat .nvmrc`
+  fi
+}
+#function chpwd()
+#{
+#    emulate -L zsh
+#    loadNvmrc
+#}
+loadNvmrc
+chpwd_functions=(${chpwd_functions[@]} "loadNvmrc")
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 # https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
