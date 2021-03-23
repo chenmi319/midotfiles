@@ -51,8 +51,6 @@ function loadNvmrc()
 {
   if [[ -a ".nvmrc" ]]; then
     nvm use `cat .nvmrc`
-  else
-    nvm use default
   fi
 }
 #function chpwd()
@@ -60,8 +58,12 @@ function loadNvmrc()
 #    emulate -L zsh
 #    loadNvmrc
 #}
-loadNvmrc
 chpwd_functions=(${chpwd_functions[@]} "loadNvmrc")
+if [[ -a ".nvmrc" ]]; then
+  nvm use `cat .nvmrc`
+else
+  nvm use default
+fi
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 # https://github.com/qhwa/Command-Line-Youdao-Dictionary.git
