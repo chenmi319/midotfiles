@@ -51,6 +51,8 @@ function loadNvmrc()
 {
   if [[ -a ".nvmrc" ]]; then
     nvm use `cat .nvmrc`
+  else
+    nvm use default
   fi
 }
 #function chpwd()
