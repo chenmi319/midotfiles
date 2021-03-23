@@ -49,8 +49,10 @@ alias aws-ssh='ssh -tt aws-office-jump ssh -tt '
 #done
 function loadNvmrc()
 {
-  if [[ -a ".nvmrc" ]]; then
-    nvm use `cat .nvmrc`
+  if command -v nvm &> /dev/null; then
+    if [[ -a ".nvmrc" ]]; then
+      nvm use `cat .nvmrc`
+    fi
   fi
 }
 #function chpwd()
@@ -59,10 +61,12 @@ function loadNvmrc()
 #    loadNvmrc
 #}
 chpwd_functions=(${chpwd_functions[@]} "loadNvmrc")
-if [[ -a ".nvmrc" ]]; then
-  nvm use `cat .nvmrc`
-else
-  nvm use default
+if command -v nvm &> /dev/null; then
+  if [[ -a ".nvmrc" ]]; then
+    nvm use `cat .nvmrc`
+  else
+    nvm use default
+  fi
 fi
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
