@@ -97,7 +97,6 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/opt/node@8/bin:$PATH"
 
 alias mysql57='docker run -it --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
 alias mysql57import='docker run -i --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
-alias rm='trash'
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
