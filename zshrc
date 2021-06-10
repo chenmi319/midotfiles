@@ -117,9 +117,12 @@ fi
 # fix failing bck-i-search
 bindkey '^R' history-incremental-search-backward
 
-alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
-alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
-
+#alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
+#alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
+alias kube_dev='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
+alias kube_dev_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-admin-pro-dev-rw --context=ningxia-dev'
+alias kube_prod='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
+alias kube_prod_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-admin-pro-dev-rw --context=prod'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
