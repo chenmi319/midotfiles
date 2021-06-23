@@ -123,6 +123,13 @@ alias kube_dev='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ni
 alias kube_dev_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-admin-pro-dev-rw --context=ningxia-dev'
 alias kube_prod='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
 alias kube_prod_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-admin-pro-dev-rw --context=prod'
+alias kube_ali_dev='kubectl --kubeconfig ~/.kube/chenmi-kube-ali-dev'
+alias create_ns_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py nx-dev'
+alias create_ns_prod='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py prod'
+alias create_ns_ali_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py ali-dev'
+alias new-k8s-permission_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py nx'
+alias new-k8s-permission_prod='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py prod'
+alias new-k8s-permission_ali_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py ali-dev'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
