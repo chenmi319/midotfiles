@@ -123,3 +123,7 @@ alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+if kubectl version --client >/dev/null 2>&1; then
+  source <(kubectl completion zsh)
+fi
