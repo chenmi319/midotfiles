@@ -122,7 +122,7 @@ bindkey '^R' history-incremental-search-backward
 export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod-offline:/Users/chenmi/.kube/chenmi-kube-ali-dev'
 alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
 alias kube_dev='kubectl --context=ningxia-dev'
-alias kube_prod_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
+alias kube_prod_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
 alias kube_prod='kubectl --context=prod'
 alias kube_prod_nx='kubectl --context=prod-nx'
 alias kube_ali_dev='kubectl --context=218843702184257115-c1fd194ba85b8408b836fdbd7b2e3845b'
