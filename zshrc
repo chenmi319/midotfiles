@@ -119,13 +119,14 @@ bindkey '^R' history-incremental-search-backward
 
 #alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
 #alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
-export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-dev'
+export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod-offline:/Users/chenmi/.kube/chenmi-kube-ali-dev'
 alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
 alias kube_dev='kubectl --context=ningxia-dev'
 alias kube_prod_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
 alias kube_prod='kubectl --context=prod'
 alias kube_prod_nx='kubectl --context=prod-nx'
 alias kube_ali_dev='kubectl --context=218843702184257115-c1fd194ba85b8408b836fdbd7b2e3845b'
+alias kube_ali_prod_offline='kubectl --context=218843702184257115-c70e80529ee1043a1a1d317270b73ea69'
 
 alias create_ns_dev='python3 ./main.py nx-dev'
 alias create_ns_prod='python3 ./main.py prod'
