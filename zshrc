@@ -119,23 +119,36 @@ bindkey '^R' history-incremental-search-backward
 
 #alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
 #alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
-alias kube_dev='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
-alias kube_dev_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-admin-pro-dev-rw --context=ningxia-dev'
-alias kube_prod='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
-alias kube_prod_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-admin-pro-dev-rw --context=prod'
-alias kube_prod_nx='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-nx'
-alias kube_ali_dev='kubectl --kubeconfig ~/.kube/chenmi-kube-ali-dev'
-alias create_ns_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py nx-dev'
-alias create_ns_prod='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py prod'
-alias create_ns_ali_dev='KUBECONFIG=~/.kube/chenmi-kube-ali-dev python3 ./main.py ali-dev'
-alias new-k8s-permission_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py nx'
-alias new-k8s-permission_prod='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw python3 ./main.py prod'
-alias new-k8s-permission_ali_dev='KUBECONFIG=~/.kube/chenmi-kube-ali-dev python3 ./main.py ali-dev'
-alias helm_ali_dev='KUBECONFIG=~/.kube/chenmi-kube-ali-dev helm_2_16_3'
-alias helm_dev='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw helm_2_9_1 --kube-context=ningxia-dev'
-alias helm_prod='KUBECONFIG=~/.kube/chenmi-kube-admin-pro-dev-rw helm_2_9_1 --kube-context=prod'
-alias velero_dev='velero --kubeconfig=/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw --kubecontext=ningxia-dev'
-alias velero_prod='velero --kubeconfig=/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw --kubecontext=prod'
+export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-dev'
+alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
+alias kube_dev='kubectl --context=ningxia-dev'
+alias kube_prod_rw='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
+alias kube_prod='kubectl --context=prod'
+alias kube_prod_nx='kubectl --context=prod-nx'
+alias kube_ali_dev='kubectl --context=218843702184257115-c1fd194ba85b8408b836fdbd7b2e3845b'
+
+alias create_ns_dev='python3 ./main.py nx-dev'
+alias create_ns_prod='python3 ./main.py prod'
+alias create_ns_ali_dev='python3 ./main.py ali-dev'
+
+alias new-k8s-permission_dev='python3 ./main.py nx'
+alias new-k8s-permission_prod='python3 ./main.py prod'
+alias new-k8s-permission_ali_dev='python3 ./main.py ali-dev'
+
+alias helm_ali_dev='helm_2_16_3 --kube-context=218843702184257115-c1fd194ba85b8408b836fdbd7b2e3845b'
+alias helm_dev='helm_2_9_1 --kube-context=ningxia-dev'
+alias helm_prod='helm_2_9_1 --kube-context=prod'
+
+alias velero_dev='velero --kubecontext=ningxia-dev'
+alias velero_prod='velero --kubecontext=prod'
+alias velero_prod_nx='velero --kubecontext=prod-nx'
+
+alias bjdev-kops1-15='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/dev kops1.15'
+alias bjdev-kops1-16='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/dev kops1.16'
+alias bjprod-kops1-15='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/prod kops1.15'
+alias mykops1-16='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://kops-bach-test kops1.16'
+alias nxdev-kops1-15='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://alo7-kops-zhy/dev kops1.15'
+alias nxprod-kops1-15='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://alo7-kops-zhy/prod kops1.15'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

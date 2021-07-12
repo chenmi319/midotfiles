@@ -127,3 +127,5 @@
   path = .gitconfig.user
 [commit]
 	template = /Users/chenmi/.gitmessage
+[diff "sopsdiffer"]
+	textconv = sops -d
