@@ -97,6 +97,7 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/opt/node@8/bin:$PATH"
 
 alias mysql57='docker run -it --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
 alias mysql57import='docker run -i --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
+alias psql13='docker run -it --rm postgres:13 psql'
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
@@ -125,20 +126,27 @@ alias kube_dev='kubectl --context=ningxia-dev'
 alias kube_prod_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
 alias kube_prod='kubectl --context=prod'
 alias kube_prod_nx='kubectl --context=prod-nx'
-alias kube_ali_dev='kubectl --context=218843702184257115-c1fd194ba85b8408b836fdbd7b2e3845b'
-alias kube_ali_prod_offline='kubectl --context=218843702184257115-c70e80529ee1043a1a1d317270b73ea69'
+alias kube_ali_dev='kubectl --context=ali-dev'
+alias kube_ali_prod_offline='kubectl --context=ali-prod-offline'
 
 alias create_ns_dev='python3 ./main.py nx-dev'
 alias create_ns_prod='python3 ./main.py prod'
 alias create_ns_ali_dev='python3 ./main.py ali-dev'
+alias create_ns_ali_prod_offline='python3 ./main.py ali-prod-offline'
 
 alias new-k8s-permission_dev='python3 ./main.py nx'
 alias new-k8s-permission_prod='python3 ./main.py prod'
 alias new-k8s-permission_ali_dev='python3 ./main.py ali-dev'
+alias new-k8s-permission_ali_prod_offline='python3 ./main.py ali-prod-offline'
 
-alias helm_ali_dev='helm_2_16_3 --kube-context=218843702184257115-c1fd194ba85b8408b836fdbd7b2e3845b'
+alias helm_ali_dev='helm_2_16_3 --kube-context=ali-dev'
+alias helm3_ali_dev='helm3 --kube-context=ali-dev'
+alias helm_ali_prod_offline='helm_2_16_3 --kube-context=ali-prod-offline'
+alias helm3_ali_prod_offline='helm3 --kube-context=ali-prod-offline'
 alias helm_dev='helm_2_9_1 --kube-context=ningxia-dev'
+alias helm3_dev='helm3 --kube-context=ningxia-dev'
 alias helm_prod='helm_2_9_1 --kube-context=prod'
+alias helm_prod_nx='helm_2_9_1 --kube-context=prod-nx'
 
 alias velero_dev='velero --kubecontext=ningxia-dev'
 alias velero_prod='velero --kubecontext=prod'
