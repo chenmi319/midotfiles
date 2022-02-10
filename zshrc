@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 # HomeBrew
-export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 # HomeBrew END
@@ -98,7 +98,9 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:/usr/local/opt/node@8/bin:$PATH"
 alias mysql57='docker run -it --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
 alias mysql57import='docker run -i --rm mysql:5.7 env LANG=C.UTF-8 mysql -A'
 alias psql13='docker run -it --rm postgres:13 psql'
+alias psql11='docker run -it --rm postgres:11 psql'
 alias psql10='docker run -it --rm postgres:10 psql'
+alias redis-cli='docker run -it --rm redis:alpine redis-cli'
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
@@ -121,9 +123,9 @@ bindkey '^R' history-incremental-search-backward
 
 #alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
 #alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
-export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod:/Users/chenmi/.kube/chenmi-kube-ali-dev:/Users/chenmi/.kube/chenmi-kube-ali-dev-ask:/Users/chenmi/.kube/chenmi-kube-ali-dev-worker:/Users/chenmi/.kube/eks:/Users/chenmi/.kube/chenmi-kube-ali-prod-worker'
-alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
-alias kube_dev='kubectl --context=ningxia-dev'
+export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod:/Users/chenmi/.kube/chenmi-kube-ali-dev:/Users/chenmi/.kube/chenmi-kube-ali-dev-ask:/Users/chenmi/.kube/chenmi-kube-ali-dev-worker:/Users/chenmi/.kube/eks:/Users/chenmi/.kube/chenmi-kube-ali-prod-worker:/Users/chenmi/.kube/mixbio-dev'
+#alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
+#alias kube_dev='kubectl --context=ningxia-dev'
 alias kube_prod_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
 alias kube_prod='kubectl --context=prod'
 alias kube_prod_eks='kubectl --context=eks'
@@ -133,8 +135,9 @@ alias kube_ali_dev_ask='kubectl --context=ali-dev-ask'
 alias kube_ali_dev_worker='kubectl --context=ali-dev-worker'
 alias kube_ali_prod='kubectl --context=ali-prod'
 alias kube_ali_prod_worker='kubectl --context=ali-prod-worker'
+alias kube_mixbio_dev='kubectl --context=mixbio-dev'
 
-alias create_ns_dev='python3 ./main.py nx-dev'
+#alias create_ns_dev='python3 ./main.py nx-dev'
 alias create_ns_prod='python3 ./main.py prod'
 alias create_ns_prod_nx='python3 ./main.py nx-prod'
 alias create_ns_ali_dev='python3 ./main.py ali-dev'
@@ -143,7 +146,7 @@ alias create_ns_ali_dev_worker='python3 ./main.py ali-dev-worker'
 alias create_ns_ali_prod='python3 ./main.py ali-prod'
 alias create_ns_ali_prod_worker='python3 ./main.py ali-prod-worker'
 
-alias new-k8s-permission_dev='python3 ./main.py nx'
+#alias new-k8s-permission_dev='python3 ./main.py nx'
 alias new-k8s-permission_prod='python3 ./main.py prod'
 alias new-k8s-permission_ali_dev='python3 ./main.py ali-dev'
 alias new-k8s-permission_ali_dev_ask='python3 ./main.py ali-dev-ask'
@@ -165,15 +168,15 @@ alias helm3_dev='helm3 --kube-context=ningxia-dev'
 alias helm_prod='helm_2_9_1 --kube-context=prod'
 alias helm_prod_nx='helm_2_9_1 --kube-context=prod-nx'
 
-alias velero_dev='velero --kubecontext=ningxia-dev'
+#alias velero_dev='velero --kubecontext=ningxia-dev'
 alias velero_prod='velero --kubecontext=prod'
 alias velero_prod_nx='velero --kubecontext=prod-nx'
 
-alias bjdev-kops1-15='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/dev kops1.15'
-alias bjdev-kops1-16='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/dev kops1.16'
+#alias bjdev-kops1-15='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/dev kops1.15'
+#alias bjdev-kops1-16='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/dev kops1.16'
 alias bjprod-kops1-15='AWS_REGION=cn-north-1 KOPS_STATE_STORE=s3://alo7-kops/prod kops1.15'
 alias mykops1-16='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://kops-bach-test kops1.16'
-alias nxdev-kops1-15='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://alo7-kops-zhy/dev kops1.15'
+#alias nxdev-kops1-15='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://alo7-kops-zhy/dev kops1.15'
 alias nxprod-kops1-15='AWS_REGION=cn-northwest-1 KOPS_STATE_STORE=s3://alo7-kops-zhy/prod kops1.15'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -182,3 +185,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 if kubectl version --client >/dev/null 2>&1; then
   source <(kubectl completion zsh)
 fi
+
+autoload -U +X compinit && compinit -i
+autoload -U +X bashcompinit && bashcompinit -i
+complete -o nospace -F /usr/local/bin/aliyun aliyun
