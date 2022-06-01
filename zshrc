@@ -169,6 +169,7 @@ alias helm_dev='helm_2_9_1 --kube-context=ningxia-dev'
 alias helm3_dev='helm3 --kube-context=ningxia-dev'
 alias helm_prod='helm_2_9_1 --kube-context=prod'
 alias helm_prod_nx='helm_2_9_1 --kube-context=prod-nx'
+alias helm_mixbio_dev='helm_2_16_3 --kube-context=mixbio-dev'
 
 #alias velero_dev='velero --kubecontext=ningxia-dev'
 alias velero_prod='velero --kubecontext=prod'
