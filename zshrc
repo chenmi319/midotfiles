@@ -123,7 +123,7 @@ bindkey '^R' history-incremental-search-backward
 
 #alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
 #alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
-export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod:/Users/chenmi/.kube/chenmi-kube-ali-dev:/Users/chenmi/.kube/chenmi-kube-ali-dev-ask:/Users/chenmi/.kube/chenmi-kube-ali-dev-worker:/Users/chenmi/.kube/eks:/Users/chenmi/.kube/chenmi-kube-ali-prod-worker:/Users/chenmi/.kube/mixbio-dev'
+export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod:/Users/chenmi/.kube/chenmi-kube-ali-dev:/Users/chenmi/.kube/chenmi-kube-ali-dev-ask:/Users/chenmi/.kube/chenmi-kube-ali-dev-worker:/Users/chenmi/.kube/eks:/Users/chenmi/.kube/chenmi-kube-ali-prod-worker:/Users/chenmi/.kube/mixbio-dev:/Users/saybot/.kube/rancher-rke.yaml'
 #alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
 #alias kube_dev='kubectl --context=ningxia-dev'
 alias kube_prod_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
@@ -136,6 +136,7 @@ alias kube_ali_dev_worker='kubectl --context=ali-dev-worker'
 alias kube_ali_prod='kubectl --context=ali-prod'
 alias kube_ali_prod_worker='kubectl --context=ali-prod-worker'
 alias kube_mixbio_dev='kubectl --context=mixbio-dev'
+alias kube_rancher_rke='kubectl --context=rancher-rke'
 
 #alias create_ns_dev='python3 ./main.py nx-dev'
 alias create_ns_prod='python3 ./main.py prod'
@@ -189,3 +190,20 @@ fi
 autoload -U +X compinit && compinit -i
 autoload -U +X bashcompinit && bashcompinit -i
 complete -o nospace -F /usr/local/bin/aliyun aliyun
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/saybot/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/saybot/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/saybot/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/saybot/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH=/Users/saybot/miniconda3/bin:$PATH
