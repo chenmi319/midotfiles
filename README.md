@@ -75,15 +75,21 @@ sudo apt-get install zsh
 * run in zsh:
 ```
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
+#setopt EXTENDED_GLOB
+#for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+#  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+#done
+ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
+ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
+ln -s ~/.zprezto/runcoms/zpreztorc ~/.zpreztorc
+ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
+ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
+ln -s ~/.zprezto/runcoms/zshrc ~/.zshrc
 tryLink ~/.midotfiles/prompt_chenmi_setup ~/.zprezto/modules/prompt/functions/prompt_chenmi_setup
 tryLink ~/.midotfiles/zpreztorc ~/.zprezto/runcoms/zpreztorc
 tryLink ~/.midotfiles/zshrc ~/.zprezto/runcoms/zshrc
 ```
-* on linux, zsh-autosuggestions may not be compatible, you may need run: cd ~/.zprezto/modules/autosuggestions/external && git fetch && git co v0.4.0
+* on linux, zsh-autosuggestions may not be compatible, you may need run: ```cd ~/.zprezto/modules/autosuggestions/external && git fetch && git checkout v0.4.0```
 * run zsh and type several commands, if everything works well, 'chsh -s /bin/zsh' or 'sudo vipw' to edit your default shell to /bin/zsh
 
 ## bash bashit(for develop)
