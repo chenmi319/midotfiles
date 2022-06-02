@@ -137,7 +137,7 @@ alias kube_ali_prod='kubectl --context=ali-prod'
 alias kube_ali_prod_worker='kubectl --context=ali-prod-worker'
 alias kube_mixbio_dev='kubectl --context=mixbio-dev'
 alias kube_rancher_rke='kubectl --context=rancher-rke'
-alias kube_mixbio_rancher='kubectl --context=mixbio-rancher-local --insecure-skip-tls-verify'
+alias kube_mixbio_rancher='kubectl --context=mixbio-rancher-local'
 
 #alias create_ns_dev='python3 ./main.py nx-dev'
 alias create_ns_prod='python3 ./main.py prod'
