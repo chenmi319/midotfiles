@@ -80,7 +80,7 @@ Bundle 'wellle/targets.vim'
 " vim-improvements.vundle
 Bundle 'AndrewRadev/splitjoin.vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'Shougo/neocomplete.git'
+"Bundle 'Shougo/neocomplete.git'
 Bundle 'briandoll/change-inside-surroundings.vim.git'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'tomtom/tcomment_vim.git'
@@ -103,6 +103,9 @@ Bundle 'goldfeld/ctrlr.vim'
 "Bundle 'editorconfig/editorconfig-vim'
 Bundle 'vim-scripts/tagbar'
 Bundle 'Shougo/vimshell.vim'
+
+" copilot
+Bundle 'github/copilot.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -134,13 +137,14 @@ syntax on
 set noswapfile
 set nobackup
 set nowb
-if has('persistent_undo')
-  if !isdirectory(expand('~').'/.vim/backups')
-    silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  endif
-  set undodir=~/.vim/backups
-  set undofile
-endif
+"if has('persistent_undo')
+"  if !isdirectory(expand('~').'/.vim/backups')
+"    silent !mkdir ~/.vim/backups > /dev/null 2>&1
+"  endif
+"  set undodir=~/.vim/backups
+"  set undofile
+"endif
+set undofile
 set autoindent
 set smartindent
 set smarttab
@@ -247,31 +251,31 @@ let g:indent_guides_auto_colors=0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 " Shougo/neocomplete.git
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_camel_case = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#buffer#disabled_pattern = '\/dist\/\|\.log\|\/tmp\/'
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#max_list = 20
-let g:neocomplete#auto_completion_start_length = 4
-let g:neocomplete#force_overwrite_completefunc = 1
-let g:neocomplete#enable_auto_select = 1
-let g:neocomplete#force_overwrite_completefunc = 1
-if !exists('g:neocomplete#keyword_patterns')
-  let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-autocmd FileType yaml setlocal noautoindent
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+"let g:acp_enableAtStartup = 0
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_camel_case = 1
+"let g:neocomplete#enable_smart_case = 1
+"let g:neocomplete#sources#buffer#disabled_pattern = '\/dist\/\|\.log\|\/tmp\/'
+"let g:neocomplete#sources#syntax#min_keyword_length = 3
+"let g:neocomplete#max_list = 20
+"let g:neocomplete#auto_completion_start_length = 4
+"let g:neocomplete#force_overwrite_completefunc = 1
+"let g:neocomplete#enable_auto_select = 1
+"let g:neocomplete#force_overwrite_completefunc = 1
+"if !exists('g:neocomplete#keyword_patterns')
+"  let g:neocomplete#keyword_patterns = {}
+"endif
+"let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+"autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+"autocmd FileType yaml setlocal noautoindent
+"" <C-h>, <BS>: close popup and delete backword char.
+"inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " jistr/vim-nerdtree-tabs.git
 let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:nerdtree_tabs_focus_on_files = 1
