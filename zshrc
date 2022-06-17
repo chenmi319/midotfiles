@@ -156,6 +156,7 @@ alias new-k8s-permission_ali_dev_ask='python3 ./main.py ali-dev-ask'
 alias new-k8s-permission_ali_dev_worker='python3 ./main.py ali-dev-worker'
 alias new-k8s-permission_ali_prod='python3 ./main.py ali-prod'
 alias new-k8s-permission_ali_prod_worker='python3 ./main.py ali-prod-worker'
+alias new-k8s-permission_mixbio_dev='python3 ./main.py mixbio-dev'
 
 alias helm_ali_dev='helm_2_16_3 --kube-context=ali-dev'
 alias helm3_ali_dev='helm3 --kube-context=ali-dev'
