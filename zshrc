@@ -209,7 +209,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH=/Users/chenmi/miniconda3/bin:$PATH
+#export PATH=/Users/chenmi/miniconda3/bin:$PATH
 
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
