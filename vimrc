@@ -532,3 +532,6 @@ else
   nmap ,cs :let @*=expand("%")<CR>
   nmap ,cl :let @*=expand("%:p")<CR>
 endif
+
+" copilot
+let b:copilot_enabled=v:false
