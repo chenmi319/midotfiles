@@ -105,7 +105,7 @@ Bundle 'vim-scripts/tagbar'
 Bundle 'Shougo/vimshell.vim'
 
 " copilot
-Bundle 'github/copilot.vim'
+"Bundle 'github/copilot.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -533,5 +533,3 @@ else
   nmap ,cl :let @*=expand("%:p")<CR>
 endif
 
-" copilot
-let b:copilot_enabled=v:false
