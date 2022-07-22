@@ -123,7 +123,7 @@ bindkey '^R' history-incremental-search-backward
 
 #alias kube_dev_ningxia='kubectl --kubeconfig ~/.kube/kube_config_ningxia'
 #alias kube_prod_beijing='kubectl --kubeconfig ~/.kube/kube_config_pro'
-export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod:/Users/chenmi/.kube/chenmi-kube-ali-dev:/Users/chenmi/.kube/chenmi-kube-ali-dev-ask:/Users/chenmi/.kube/chenmi-kube-ali-dev-worker:/Users/chenmi/.kube/eks:/Users/chenmi/.kube/chenmi-kube-ali-prod-worker:/Users/chenmi/.kube/mixbio-dev:/Users/chenmi/.kube/rancher-rke.yaml:/Users/chenmi/.kube/mixbio-rancher.yaml:/Users/chenmi/.kube/mixbio.yaml'
+export KUBECONFIG='/Users/chenmi/.kube/chenmi-kube-admin-pro-dev-rw:/Users/chenmi/.kube/chenmi-kube-pro-nx:/Users/chenmi/.kube/chenmi-kube-ali-prod:/Users/chenmi/.kube/chenmi-kube-ali-dev:/Users/chenmi/.kube/chenmi-kube-ali-dev-ask:/Users/chenmi/.kube/chenmi-kube-ali-dev-worker:/Users/chenmi/.kube/eks:/Users/chenmi/.kube/chenmi-kube-ali-prod-worker:/Users/chenmi/.kube/mixbio-dev:/Users/chenmi/.kube/rancher-rke.yaml:/Users/chenmi/.kube/mixbio-rancher.yaml:/Users/chenmi/.kube/mixbio.yaml:/Users/chenmi/.kube/mixbio-rancher.yaml:/Users/chenmi/.kube/mixbio-prod.yaml'
 #alias kube_dev_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=ningxia-dev'
 #alias kube_dev='kubectl --context=ningxia-dev'
 alias kube_prod_ro='kubectl --kubeconfig ~/.kube/chenmi-kube-pro-dev-ro --context=prod'
@@ -139,6 +139,7 @@ alias kube_mixbio_dev='kubectl --context=mixbio-dev'
 alias kube_rancher_rke='kubectl --context=rancher-rke'
 alias kube_mixbio_rancher='kubectl --context=mixbio-rancher-local'
 alias kube_mixbio='kubectl --context=mixbio'
+alias kube_mixbio_prod='kubectl --context=mixbio-prod'
 
 #alias create_ns_dev='python3 ./main.py nx-dev'
 alias create_ns_prod='python3 ./main.py prod'
@@ -148,6 +149,7 @@ alias create_ns_ali_dev_ask='python3 ./main.py ali-dev-ask'
 alias create_ns_ali_dev_worker='python3 ./main.py ali-dev-worker'
 alias create_ns_ali_prod='python3 ./main.py ali-prod'
 alias create_ns_ali_prod_worker='python3 ./main.py ali-prod-worker'
+alias create_ns_mixbio_prod='python3 ./main_n.py mixbio-prod'
 
 #alias new-k8s-permission_dev='python3 ./main.py nx'
 alias new-k8s-permission_prod='python3 ./main.py prod'
@@ -157,6 +159,7 @@ alias new-k8s-permission_ali_dev_worker='python3 ./main.py ali-dev-worker'
 alias new-k8s-permission_ali_prod='python3 ./main.py ali-prod'
 alias new-k8s-permission_ali_prod_worker='python3 ./main.py ali-prod-worker'
 alias new-k8s-permission_mixbio_dev='python3 ./main.py mixbio-dev'
+alias new-k8s-permission_mixbio_prod='python3 ./main_n.py mixbio-prod'
 
 alias helm_ali_dev='helm_2_16_3 --kube-context=ali-dev'
 alias helm3_ali_dev='helm3 --kube-context=ali-dev'
@@ -172,6 +175,7 @@ alias helm3_dev='helm3 --kube-context=ningxia-dev'
 alias helm_prod='helm_2_9_1 --kube-context=prod'
 alias helm_prod_nx='helm_2_9_1 --kube-context=prod-nx'
 alias helm_mixbio_dev='helm_2_16_3 --kube-context=mixbio-dev'
+alias helm_mixbio_prod='helm_2_16_3 --kube-context=mixbio-prod'
 
 #alias velero_dev='velero --kubecontext=ningxia-dev'
 alias velero_prod='velero --kubecontext=prod'
@@ -209,7 +213,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-#export PATH=/Users/chenmi/miniconda3/bin:$PATH
+export PATH=/Users/chenmi/miniconda3/bin:$PATH
 
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
