@@ -105,6 +105,8 @@ bash-it enable plugin git git-subrepo history nginx rails ruby rvm ssh tmux
 bash-it enable alias git rails tmux vim
 echo "export VISUAL=vim" >> ~/.bashrc
 echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
+echo "alias tmux='tmux -2 -u'" >> ~/.bashrc
+
 ```
 * relogin
 
@@ -113,6 +115,7 @@ echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
 ```
 git clone https://github.com/nojhan/liquidprompt.git ~/.liquidprompt
 echo '[[ $- = *i* ]] && source ~/.liquidprompt/liquidprompt' >> ~/.bashrc
+echo "alias tmux='tmux -2 -u'" >> ~/.bashrc
 tryLink ~/.midotfiles/liquidpromptrc ~/.liquidpromptrc
 ```
 * relogin
