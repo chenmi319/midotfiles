@@ -106,6 +106,7 @@ bash-it enable alias git rails tmux vim
 echo "export VISUAL=vim" >> ~/.bashrc
 echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
 echo "alias tmux='tmux -2 -u'" >> ~/.bashrc
+echo "export BASH_IT_THEME='doubletime'" >> ~/.bashrc
 
 ```
 * relogin
