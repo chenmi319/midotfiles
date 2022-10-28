@@ -100,13 +100,13 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ```
 * relogin and run in bash:
 ```
-bash-it enable completion bundler capistrano rake ssh tmux
+bash-it enable completion bundler capistrano rake ssh tmux conda
 bash-it enable plugin git git-subrepo history nginx rails ruby rvm ssh tmux
-bash-it enable alias git rails tmux vim
+bash-it enable alias git rails tmux vim conda
 echo "export VISUAL=vim" >> ~/.bashrc
 echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
 echo "alias tmux='tmux -2 -u'" >> ~/.bashrc
-echo "export BASH_IT_THEME='doubletime'" >> ~/.bashrc
+echo "export BASH_IT_THEME='powerline-multiline'" >> ~/.bashrc
 
 ```
 * relogin
