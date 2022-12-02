@@ -203,19 +203,21 @@ complete -o nospace -F /usr/local/bin/aliyun aliyun
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/chenmi/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
+conda_init(){
+  __conda_setup="$('/Users/chenmi/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+  if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-else
+  else
     if [ -f "/Users/chenmi/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/chenmi/miniconda3/etc/profile.d/conda.sh"
+      . "/Users/chenmi/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/chenmi/miniconda3/bin:$PATH"
+      export PATH="/Users/chenmi/miniconda3/bin:$PATH"
     fi
-fi
-unset __conda_setup
+  fi
+  unset __conda_setup
+  export PATH=/Users/chenmi/miniconda3/bin:$PATH
+}
 # <<< conda initialize <<<
-export PATH=/Users/chenmi/miniconda3/bin:$PATH
 
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
