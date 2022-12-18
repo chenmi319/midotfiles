@@ -107,6 +107,12 @@ Bundle 'Shougo/vimshell.vim'
 " copilot
 "Bundle 'github/copilot.vim'
 
+"https://github.com/neoclide/coc.nvim
+" node 试用 nvm 设置 nvm alias default v14 的最新版本最好
+" cd ~/.vim/bundle/coc.nvim, yarn install --frozen-lockfile
+Bundle 'neoclide/coc.nvim', {'branch': 'release'}
+" in vim :CocInstall coc-tabnine
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
