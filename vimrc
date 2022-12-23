@@ -540,4 +540,4 @@ else
   nmap ,cl :let @*=expand("%:p")<CR>
 endif
 
-nnoremap <leader>r :!%:p
+nnoremap <leader>r :!"%:p"
