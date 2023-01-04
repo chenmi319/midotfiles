@@ -421,6 +421,8 @@ let g:gitgutter_eager = 0
 let g:gitgutter_realtime = 0
 " garbas/vim-snipmate.git
 let g:snipMate = { 'snippet_version' : 1 }
+" 'mattn/emmet-vim'
+let g:user_emmet_leader_key='<C-Z>'
 " customize configs
 vnoremap <leader>p "0p
 vnoremap <leader>P "0P
