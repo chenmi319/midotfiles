@@ -108,6 +108,8 @@ echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
 echo "alias tmux='tmux -2 -u'" >> ~/.bashrc
 sed -i 's/bobby/sexy/g' ~/.bashrc
 echo "export SEXY_THEME_SHOW_PYTHON=true" >> ~/.bashrc
+echo "export BASH_IT_COMMAND_DURATION=true" >> ~/.bashrc
+echo "export COMMAND_DURATION_MIN_SECONDS=5" >> ~/.bashrc
 ```
 * relogin
 
