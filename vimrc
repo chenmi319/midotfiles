@@ -109,7 +109,7 @@ Bundle 'Shougo/vimshell.vim'
 
 " https://github.com/neoclide/coc.nvim
 " node 试用 nvm 设置 nvm alias default v14 的最新版本最好
-" cd ~/.vim/bundle/coc.nvim, yarn install --frozen-lockfile
+" cd ~/.vim/bundle/coc.nvim; yarn install --frozen-lockfile
 Bundle 'neoclide/coc.nvim', {'branch': 'release'}
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 " in vim :CocInstall coc-calc coc-diagnostic coc-docker coc-git coc-jedi coc-json @yaegassy/coc-nginx coc-sh coc-solargraph coc-tabnine coc-xml coc-yaml
