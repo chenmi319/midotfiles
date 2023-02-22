@@ -108,6 +108,7 @@ echo "export EDITOR=\"\$VISUAL\"" >> ~/.bashrc
 echo "alias tmux='tmux -2 -u'" >> ~/.bashrc
 sed -i 's/bobby/sexy/g' ~/.bashrc
 echo "export SEXY_THEME_SHOW_PYTHON=true" >> ~/.bashrc
+echo "export PATH=\"\$PATH:\$HOME/bin\"" >> ~/.bashrc
 ```
 * relogin
 
