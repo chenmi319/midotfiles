@@ -37,6 +37,7 @@ Bundle 'scrooloose/syntastic.git'
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
 Bundle 'robbles/logstash.vim'
+Bundle 'broadinstitute/vim-wdl'
 
 " project.vundle
 Bundle 'jistr/vim-nerdtree-tabs.git'
