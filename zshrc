@@ -109,7 +109,9 @@ alias redis-cli='docker run -it --rm redis:alpine redis-cli'
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 #export PATH="$HOME/.rvm/bin:$PATH"
 # fix Warning! PATH is not properly set up, $HOME/.rvm/gems/ruby-x.x.x/bin is not at first place.
-export PATH="$GEM_HOME/bin:$PATH"
+if [[ -n $GEM_HOME ]]; then
+  export PATH="$GEM_HOME/bin:$PATH"
+fi
 
 # fix rvm not reload in ubuntu in tmux
 if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
