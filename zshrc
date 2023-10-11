@@ -203,27 +203,65 @@ autoload -U +X compinit && compinit -i
 autoload -U +X bashcompinit && bashcompinit -i
 complete -o nospace -F /usr/local/bin/aliyun aliyun
 
-CONDA_INSTALL_DIR='/Users/chenmi/miniconda3'
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-conda_init(){
-  __conda_setup="$(\"${CONDA_INSTALL_DIR}/bin/conda\" 'shell.zsh' 'hook' 2> /dev/null)"
-  if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-  else
-    if [ -f "${CONDA_INSTALL_DIR}/etc/profile.d/conda.sh" ]; then
-      . "${CONDA_INSTALL_DIR}/etc/profile.d/conda.sh"
-    else
-      export PATH="${CONDA_INSTALL_DIR}/bin:$PATH"
-    fi
-  fi
-  unset __conda_setup
-  export PATH=${CONDA_INSTALL_DIR}/bin:$PATH
-}
-# <<< conda initialize <<<
+#CONDA_INSTALL_DIR='/Users/chenmi/miniconda3'
+## >>> conda initialize >>>
+## !! Contents within this block are managed by 'conda init' !!
+#conda_init(){
+#  __conda_setup="$(\"${CONDA_INSTALL_DIR}/bin/conda\" 'shell.zsh' 'hook' 2> /dev/null)"
+#  if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#  else
+#    if [ -f "${CONDA_INSTALL_DIR}/etc/profile.d/conda.sh" ]; then
+#      . "${CONDA_INSTALL_DIR}/etc/profile.d/conda.sh"
+#    else
+#      export PATH="${CONDA_INSTALL_DIR}/bin:$PATH"
+#    fi
+#  fi
+#  unset __conda_setup
+#  export PATH=${CONDA_INSTALL_DIR}/bin:$PATH
+#}
+## <<< conda initialize <<<
 
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 export PATH="$PATH:$HOME/bin"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+export PATH="$HOME/.local/bin/:$PATH"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/Users/saybot/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/Users/saybot/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+alias conda=micromamba
+#conda activate base
+
+# pnpm
+export PNPM_HOME="/Users/saybot/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# asdf
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+# asdf end

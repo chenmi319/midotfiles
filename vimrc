@@ -257,6 +257,7 @@ endtry
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors=0
+let g:indent_guides_enable_on_vim_startup = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=235
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 " Shougo/neocomplete.git
@@ -426,6 +427,7 @@ let g:gitgutter_realtime = 0
 let g:snipMate = { 'snippet_version' : 1 }
 " 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<C-Z>'
+
 " customize configs
 vnoremap <leader>p "0p
 vnoremap <leader>P "0P
@@ -709,3 +711,7 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " neoclide/coc.nvim end
+
+" copilot
+inoremap <Leader>n <Plug>(copilot-next)
+inoremap <Leader>p <Plug>(copilot-next)
