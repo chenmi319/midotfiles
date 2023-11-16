@@ -250,14 +250,6 @@ unset __mamba_setup
 alias conda=micromamba
 #conda activate base
 
-# pnpm
-export PNPM_HOME="/Users/saybot/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
 # asdf
 . "$HOME/.asdf/asdf.sh"
 # append completions to fpath

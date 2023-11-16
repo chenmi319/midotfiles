@@ -106,7 +106,10 @@ Bundle 'vim-scripts/tagbar'
 Bundle 'Shougo/vimshell.vim'
 
 " copilot
-Bundle 'github/copilot.vim'
+"Bundle 'github/copilot.vim'
+
+" codeium, if auth ssl error, find ~/.vim/bundle/codeium.vim/autoload/codeium/command.vim and edit ```curl``` to ```curl -k```
+Bundle 'Exafunction/codeium.vim'
 
 " https://github.com/neoclide/coc.nvim
 " node 试用 nvm 设置 nvm alias default v16 的最新版本最好
@@ -713,5 +716,11 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " neoclide/coc.nvim end
 
 " copilot
-inoremap <Leader>n <Plug>(copilot-next)
-inoremap <Leader>p <Plug>(copilot-next)
+"inoremap <Leader>n <Plug>(copilot-next)
+"inoremap <Leader>p <Plug>(copilot-next)
+
+" Codeium
+imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
+imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+imap <C-x>   <Cmd>call codeium#Clear()<CR>
